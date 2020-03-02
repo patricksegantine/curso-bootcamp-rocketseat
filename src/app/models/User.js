@@ -22,6 +22,14 @@ class User extends Model {
 
     return this;
   }
+
+  /**
+   * Compara a senha informada no login com a senha cadastrada no banco de dados
+   * @param {*} password
+   */
+  checkPassword(password) {
+    return bcrypt.compare(password, this.password_hash);
+  }
 }
 
 export default User;
