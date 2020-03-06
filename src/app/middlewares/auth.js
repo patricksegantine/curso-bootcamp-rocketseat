@@ -17,7 +17,7 @@ export default async (req, res, next) => {
 
     // inclui a propriedade com o id do usuário do objeto req
     // para ser usado em qualquer controller
-    req.userId = decoded;
+    req.userId = decoded.id;
 
     return next();
   } catch (error) {
