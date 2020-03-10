@@ -3,6 +3,8 @@ import File from '../models/File';
 class FileController {
   async store(req, res) {
     // The 'file' object was added by multer middleware in the request object
+    // return res.json(req.file);
+
     const { originalname: name, filename: path } = req.file;
 
     const file = await File.create({
