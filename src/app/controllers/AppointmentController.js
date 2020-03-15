@@ -4,6 +4,9 @@ import { startOfHour, parseISO, isBefore } from 'date-fns';
 import Appointment from '../models/Appointment';
 import User from '../models/User';
 
+/**
+ * Controller to manager requests from common user
+ */
 class AppointmentController {
   async index(req, res) {
     const { page = 1 } = req.query;
