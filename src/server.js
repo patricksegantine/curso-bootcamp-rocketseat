@@ -1,7 +1,7 @@
 import app from './app';
 
-const port = 3333;
+const PORT = process.env.PORT || 3333;
 
-app.listen(port, () => {
-  console.log(`Servidor iniciado em http://localhost:${port}/`);
+app.listen(PORT, () => {
+  console.log(`Servidor iniciado em http://localhost:${PORT}/`);
 });
