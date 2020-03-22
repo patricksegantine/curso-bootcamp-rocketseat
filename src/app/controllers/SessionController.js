@@ -12,7 +12,7 @@ class SessionController {
         .required(),
       password: Yup.string()
         .required()
-        .min(6)
+        .min(6),
     });
 
     if (!(await schema.isValid(req.body))) {
@@ -32,11 +32,11 @@ class SessionController {
       user: {
         id,
         name,
-        email
+        email,
       },
       token: jwt.sign({ id }, authConfig.secret, {
-        expiresIn: authConfig.expiresIn
-      })
+        expiresIn: authConfig.expiresIn,
+      }),
     });
   }
 }
